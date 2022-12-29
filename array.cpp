@@ -5,6 +5,25 @@ template<typename T>class array{
         T* ptr;
         int size;
     
+        // Partition function
+        T partition(T* arr, int begin, int end){
+                int pivot = arr[begin];
+                int count = 0;
+                for(int i = begin; i<=end; i++){
+                    if (arr[i] <= pivot){
+                        count++;
+                    }
+                }
+
+                pivot = count + begin;
+                // int pivotIndex = begin + count;
+                while( begin < pivot && end > pivot){
+                    continue;
+                }
+
+            }
+        // quick-sort function
+
     public:
         array(int size){
             this->size = size;
@@ -27,26 +46,9 @@ template<typename T>class array{
             return(size);
         }
         T sort(){
-            // Quick sort is the fastest one. Implement that.
-            // Partition function
-            T partition(T* arr, int begin, int end){
+            // Quick sort is the fastest one. Implementation that.
+            
 
-                int count = 0;
-                for(int i = begin; i<=end; i++){
-                    if (arr[i] <= pivot){
-                        count++;
-                    }
-                }
-
-                int pivot = count + begin;
-                // int pivotIndex = begin + count;
-                while( begin < pivot && end > pivot){
-                    continue;
-                }
-
-            }
-
-            // quick function
         }
 
 };
